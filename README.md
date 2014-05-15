@@ -3,7 +3,7 @@ JSF Conversations Playground
 
 I created this small project to experiment with CDI scopes in JSF-applications. Other than that, it does nothing useful :)
 
-It requires Java 1.7 (or higher) and Maven to build.
+It requires Java 1.7 (or higher) and Maven to build, and a Java EE 7 application server to run.
 
 Build with:
 
