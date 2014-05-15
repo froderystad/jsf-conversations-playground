@@ -1,24 +1,15 @@
 package no.jpro.examples.jsfconversations;
 
-import java.io.Serializable;
-
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.Conversation;
-import javax.enterprise.context.ConversationScoped;
 import javax.inject.Inject;
-import javax.inject.Named;
+import java.io.Serializable;
 
-@Named
-@ConversationScoped
-public class PrimeBean implements Serializable {
+public abstract class AbstractConversationBean implements Serializable {
     @Inject
     private Conversation conversation;
 
     private String name;
-
-    public PrimeBean() {
-        System.out.println("*** Created PrimeBean");
-    }
 
     @PostConstruct
     public void postConstruct() {
@@ -41,10 +32,5 @@ public class PrimeBean implements Serializable {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String welcome() {
-        System.out.println("*** Controller greets " + name);
-        return "pWelcome";
     }
 }

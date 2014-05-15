@@ -11,13 +11,13 @@
 <h:body>
 	<h3>Hello from PrimeFaces</h3>
 	<h:form>
-		<h:inputText value="#{primeBean.name}"/>
-		<p:commandButton value="Welcome Me" action="#{primeBean.welcome}">
+		<h:inputText value="#{primeFacesBean.name}"/>
+		<p:commandButton value="Welcome Me" action="#{primeFacesBean.welcome}">
 			<f:param
 				name="#{not empty javax.enterprise.context.conversation.id?'cid':''}"
 				value="#{javax.enterprise.context.conversation.id}" />
 		</p:commandButton>
 	</h:form>
-	<h:link outcome="/hello" value="Swich to Mojarra"/>
+	<h:link outcome="/mHello" value="Swich to Mojarra"/>
 </h:body>
 </html>

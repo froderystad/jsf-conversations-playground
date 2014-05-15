@@ -9,14 +9,14 @@
 </h:head>
 <h:body>
 	<h3>Welcome from PrimeFaces</h3>
-	<p>Welcome #{primeBean.name}</p>
+	<p>Welcome #{primeFacesBean.name}</p>
 	<p>
 		<h:link outcome="/pHello" value="Retry..">
 			<f:param name="cid" value="#{javax.enterprise.context.conversation.id}"/>
 		</h:link>
 	</p>
 	<p>
-		<h:link outcome="/hello" value="Swich to Mojarra"/>
+		<h:link outcome="/mHello" value="Swich to Mojarra"/>
 	</p>
 </h:body>
 </html>

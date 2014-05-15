@@ -10,7 +10,7 @@
     <h:body>
         <h3>Welcome from Mojarra</h3>
         <p>Welcome #{mojarraBean.name}</p>
-        <p><h:link outcome="/hello" value="Retry..">
+        <p><h:link outcome="/mHello" value="Retry..">
             <f:param name="cid" value="#{javax.enterprise.context.conversation.id}"/>
         </h:link></p>
 		<p><h:link outcome="/pHello" value="Swich to PrimeFaces"/></p>
