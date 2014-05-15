@@ -2,17 +2,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
 <h:head>
-    <title>JSF 2.0 Hello World</title>
+    <title>Testing CDI Conversations in JSF</title>
 </h:head>
 <h:body>
-    <h3>JSF 2.0 Hello World Example - hello.xhtml</h3>
+    <h3>Hello from Mojarra</h3>
     <h:form>
-        <h:inputText value="#{helloBean.name}"></h:inputText>
-        <h:commandButton value="Welcome Me" action="welcome"></h:commandButton>
+        <h:inputText value="#{mojarraBean.name}"/>
+        <h:commandButton value="Welcome Me" action="welcome"/>
     </h:form>
+	<h:link outcome="/pHello" value="Swich to PrimeFaces"/>
 </h:body>
 </html>

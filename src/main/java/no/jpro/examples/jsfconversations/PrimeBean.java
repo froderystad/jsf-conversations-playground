@@ -1,35 +1,28 @@
 package no.jpro.examples.jsfconversations;
 
+import java.io.Serializable;
+
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.Conversation;
 import javax.enterprise.context.ConversationScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-import java.io.Serializable;
 
-@Named("helloBean")
+@Named
 @ConversationScoped
-public class ConversationBean implements Serializable {
+public class PrimeBean implements Serializable {
     @Inject
     private Conversation conversation;
 
     private String name;
 
-    public ConversationBean() {
-        System.out.println("*** Created ConversationBean");
+    public PrimeBean() {
+        System.out.println("*** Created PrimeBean");
     }
 
     @PostConstruct
     public void postConstruct() {
-        //wrongConversationHandling();
         correctConversationHandling();
-    }
-
-    private void wrongConversationHandling() {
-        if (!conversation.isTransient()) {
-            conversation.end();
-        }
-        conversation.begin();
     }
 
     private void correctConversationHandling() {
@@ -48,5 +41,10 @@ public class ConversationBean implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String welcome() {
+        System.out.println("*** Controller greets " + name);
+        return "pWelcome";
     }
 }
